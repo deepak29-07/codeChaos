@@ -1,65 +1,68 @@
-import Image from "next/image";
+"use client";
+import Button from "../components/Button";
+import CircularIcons from "./animations/Animation";
+import useWheelRotation from "./animations/useWheelRotation";
 
 export default function Home() {
+  const { rotationIndex, rotateClockwise, rotateCounterClockwise } = useWheelRotation(8);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="flex flex-col lg:flex-row items-center justify-center overflow-hidden min-h-screen px-4 py-8 lg:py-0">
+      {/* Left Section - Title and Buttons */}
+      <div className="flex w-full lg:w-[50%] min-h-[50vh] lg:h-screen items-center justify-center">
+        <div>
+          <div className="w-full">
+            <h1 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-8xl">
+              <span className="text-green-500 font-antio">pears GLOBAL</span> HACKATHON
+            </h1>
+          </div>
+          <div className="flex flex-col sm:flex-row p-3 gap-4 sm:gap-6">
+            <Button />
+            <Button />
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      </div>
+
+      {/* Right Section - Animation with Controls */}
+      <div className="flex flex-col-reverse lg:flex-row w-full lg:w-[50%] items-center justify-center min-h-[50vh] lg:h-screen">
+        {/* Arrow Controls */}
+        <div className="flex lg:flex-col items-center justify-around gap-4 mb-4 lg:mb-0 lg:mr-4">
+          {/* Up Arrow - Rotates clockwise */}
+          <button
+            onClick={rotateClockwise}
+            className="p-2 rounded-full hover:bg-gray-700 transition-colors duration-200 active:scale-95"
+            aria-label="Rotate clockwise"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              className="w-8 h-8 sm:w-10 sm:h-10 lg:w-[50px] lg:h-[50px] text-green-500 hover:text-green-400"
+              fill="currentColor"
+            >
+              <path d="M12 2C17.52 2 22 6.48 22 12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12C2 6.48 6.48 2 12 2ZM12 20C16.42 20 20 16.42 20 12C20 7.58 16.42 4 12 4C7.58 4 4 7.58 4 12C4 16.42 7.58 20 12 20ZM13 12V16H11V12H8L12 8L16 12H13Z"></path>
+            </svg>
+          </button>
+
+          {/* Down Arrow - Rotates counter-clockwise */}
+          <button
+            onClick={rotateCounterClockwise}
+            className="p-2 rounded-full hover:bg-gray-700 transition-colors duration-200 active:scale-95"
+            aria-label="Rotate counter-clockwise"
           >
-            Documentation
-          </a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              className="w-8 h-8 sm:w-10 sm:h-10 lg:w-[50px] lg:h-[50px] text-green-500 hover:text-green-400"
+              fill="currentColor"
+            >
+              <path d="M12 2C17.52 2 22 6.48 22 12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12C2 6.48 6.48 2 12 2ZM12 20C16.42 20 20 16.42 20 12C20 7.58 16.42 4 12 4C7.58 4 4 7.58 4 12C4 16.42 7.58 20 12 20ZM13 12H16L12 16L8 12H11V8H13V12Z"></path>
+            </svg>
+          </button>
         </div>
-      </main>
+
+        {/* Circular Icons Animation */}
+        <CircularIcons rotationIndex={rotationIndex} />
+      </div>
     </div>
   );
 }
