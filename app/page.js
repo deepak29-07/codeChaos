@@ -7,13 +7,13 @@ import useWheelRotation from "./animations/useWheelRotation";
 // Home Content Component
 function HomeContent() {
   return (
-    <div>
+    <div className="w-full max-w-2xl">
       <div className="w-full">
-        <h1 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-8xl">
+        <h1 className="text-white text-5xl sm:text-6xl md:text-7xl lg:text-9xl leading-tight">
           <span className="text-green-500 font-antio">pears GLOBAL</span> HACKATHON
         </h1>
       </div>
-      <div className="flex flex-col sm:flex-row p-3 gap-4 sm:gap-6">
+      <div className="flex flex-col sm:flex-row p-4 gap-5 sm:gap-8 mt-4">
         <Button />
         <Button />
       </div>
@@ -24,27 +24,27 @@ function HomeContent() {
 // FAQ Content Component
 function FAQContent() {
   return (
-    <div className="w-full max-w-lg">
-      <h1 className="text-green-500 text-3xl sm:text-4xl md:text-5xl font-bold mb-6">📋 FAQ</h1>
-      <div className="flex flex-wrap gap-4 mb-6">
-        <div className="bg-[#333333] rounded-2xl p-4 flex-1 min-w-[120px]">
-          <h3 className="text-center text-sm">Team Size</h3>
-          <h3 className="text-center text-xl font-bold">1 - 4</h3>
+    <div className="w-full max-w-2xl">
+      <h1 className="text-green-500 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8">📋 FAQ</h1>
+      <div className="flex flex-wrap gap-6 mb-8">
+        <div className="bg-[#333333] rounded-2xl p-6 flex-1 min-w-[160px]">
+          <h3 className="text-center text-base lg:text-lg text-gray-300">Team Size</h3>
+          <h3 className="text-center text-2xl lg:text-3xl font-bold text-white">1 - 4</h3>
         </div>
-        <div className="bg-[#333333] rounded-2xl p-4 flex-1 min-w-[120px]">
-          <h3 className="text-center text-sm">Registration Cost</h3>
-          <h3 className="text-center text-xl font-bold">NA</h3>
+        <div className="bg-[#333333] rounded-2xl p-6 flex-1 min-w-[160px]">
+          <h3 className="text-center text-base lg:text-lg text-gray-300">Registration Cost</h3>
+          <h3 className="text-center text-2xl lg:text-3xl font-bold text-white">NA</h3>
         </div>
       </div>
-      <div className="space-y-2">
+      <div className="space-y-3">
         <details className="bg-gray-600 rounded-xl">
-          <summary className="p-3 cursor-pointer text-sm">What is the project submission deadline?</summary>
-          <div className="px-4 pb-3 text-sm">End of February. First-come, first-serve basis.</div>
+          <summary className="p-4 cursor-pointer text-base lg:text-lg">What is the project submission deadline?</summary>
+          <div className="px-5 pb-4 text-base lg:text-lg text-gray-200">End of February. First-come, first-serve basis.</div>
         </details>
-        <div className="bg-gray-600 rounded-xl p-3 text-sm">Who can participate in this hackathon?</div>
-        <div className="bg-gray-600 rounded-xl p-3 text-sm">What should the projects be built on?</div>
+        <div className="bg-gray-600 rounded-xl p-4 text-base lg:text-lg">Who can participate in this hackathon?</div>
+        <div className="bg-gray-600 rounded-xl p-4 text-base lg:text-lg">What should the projects be built on?</div>
       </div>
-      <p className="text-sm mt-4 text-gray-400">Got more questions? community@geekroom.in</p>
+      <p className="text-base lg:text-lg mt-6 text-gray-400">Got more questions? community@geekroom.in</p>
     </div>
   );
 }
@@ -52,16 +52,16 @@ function FAQContent() {
 // Contact Content Component
 function ContactContent() {
   return (
-    <div className="w-full max-w-md">
-      <h1 className="text-green-500 text-3xl sm:text-4xl md:text-5xl font-bold mb-6">📞 Contact Us</h1>
-      <div className="bg-[#333333] rounded-xl p-6">
-        <h2 className="text-xl font-bold mb-4">GOT A QUERY?</h2>
-        <p className="text-sm mb-4">We're here to assist you! Join us on Keet:</p>
-        <button className="rounded-2xl bg-green-500 hover:bg-green-600 text-white px-6 py-2 text-sm mb-4 transition-colors">
+    <div className="w-full max-w-2xl">
+      <h1 className="text-green-500 text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold mb-8">📞 Contact Us</h1>
+      <div className="bg-[#333333] rounded-2xl p-10 lg:p-12">
+        <h2 className="text-3xl lg:text-4xl font-bold mb-6">GOT A QUERY?</h2>
+        <p className="text-lg lg:text-xl mb-6 text-gray-200">We're here to assist you! Join us on Keet:</p>
+        <button className="rounded-2xl bg-green-500 hover:bg-green-600 text-white px-10 py-4 text-lg lg:text-xl mb-6 transition-colors font-semibold">
           JOIN US ON KEET
         </button>
-        <p className="text-sm mb-3">Also checkout our social handles:</p>
-        <div className="space-y-1 text-sm text-gray-300">
+        <p className="text-lg lg:text-xl mb-5 text-gray-200">Also checkout our social handles:</p>
+        <div className="space-y-3 text-lg lg:text-xl text-gray-300">
           <div>www.geekroom.in</div>
           <div>community@geekroom.in</div>
           <div>GEEK SUITE</div>
@@ -82,40 +82,40 @@ function TeamContent() {
   ];
 
   return (
-    <div className="w-[40vw] min-w-[300px]">
-      <h1 className="text-green-500 text-3xl sm:text-4xl md:text-5xl font-bold mb-6">👥 Team</h1>
-      <div className="space-y-5">
+    <div className="w-full max-w-7xl">
+      <h1 className="text-green-500 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8">👥 Team</h1>
+      <div className="space-y-6">
         {teamCategories.map((category, index) => (
           <a
             key={category.name}
             href={category.href}
-            className="flex items-center justify-between bg-[#333333] hover:bg-[#404040] rounded-full px-4 py-3 transition-all duration-300 group"
+            className="flex items-center justify-between bg-[#333333] hover:bg-[#404040] rounded-full px-10 py-5 transition-all duration-300 group"
           >
             {/* Left side - arrow or pear icon */}
-            <div className="w-10 h-10 flex items-center justify-center">
+            <div className="w-12 h-12 flex items-center justify-center">
               {index % 2 === 0 ? (
-                <div className="w-8 h-8 rounded-full border-2 border-green-500 flex items-center justify-center">
-                  <span className="text-green-500">‹</span>
+                <div className="w-10 h-10 rounded-full border-2 border-green-500 flex items-center justify-center">
+                  <span className="text-green-500 text-xl">‹</span>
                 </div>
               ) : (
-                <div className="w-10 h-10 rounded-full bg-[#555555] flex items-center justify-center">
-                  <span className="text-green-400 text-lg">🍐</span>
+                <div className="w-12 h-12 rounded-full bg-[#555555] flex items-center justify-center">
+                  <span className="text-green-400 text-xl">🍐</span>
                 </div>
               )}
             </div>
 
             {/* Center - Category name */}
-            <span className="text-white font-bold text-lg tracking-wider">{category.name}</span>
+            <span className="text-white font-bold text-xl lg:text-2xl tracking-wider">{category.name}</span>
 
             {/* Right side - pear icon or arrow */}
-            <div className="w-10 h-10 flex items-center justify-center">
+            <div className="w-12 h-12 flex items-center justify-center">
               {index % 2 === 0 ? (
-                <div className="w-10 h-10 rounded-full bg-[#555555] flex items-center justify-center">
-                  <span className="text-green-400 text-lg">🍐</span>
+                <div className="w-12 h-12 rounded-full bg-[#555555] flex items-center justify-center">
+                  <span className="text-green-400 text-xl">🍐</span>
                 </div>
               ) : (
-                <div className="w-8 h-8 rounded-full border-2 border-green-500 flex items-center justify-center">
-                  <span className="text-green-500">›</span>
+                <div className="w-10 h-10 rounded-full border-2 border-green-500 flex items-center justify-center">
+                  <span className="text-green-500 text-xl">›</span>
                 </div>
               )}
             </div>
@@ -129,11 +129,11 @@ function TeamContent() {
 // Placeholder Content for icons without pages
 function PlaceholderContent({ label, icon }) {
   return (
-    <div className="w-full max-w-md text-center">
-      <h1 className="text-gray-500 text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+    <div className="w-full max-w-2xl text-center">
+      <h1 className="text-gray-500 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8">
         {icon} {label}
       </h1>
-      <p className="text-gray-500">Coming soon...</p>
+      <p className="text-gray-500 text-lg lg:text-xl">Coming soon...</p>
     </div>
   );
 }
